@@ -8,168 +8,143 @@
 
 body {
   font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
   height: 97px;
   background: #222;
+  margin-bottom: 42px;
 }
+
 .navbar {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0px 50px;
-  height: 50.67px;
-  left: 0px;
-  top: 19px;
-}
-
-.navbar_logo {
-  /* Group */
-
-  width: 42px;
-  height: 49.76px;
-
-  /* transform: matrix(1, 0, 0, -1, 0, 0); */
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  height: 100%;
 }
 
 .navbar_links {
-  /* display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem 1rem 0rem 1rem;
-    color: azure; */
-
-  /* NavItems */
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  gap: 13px;
-  width: 514px;
-  height: 39px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  color: azure;
-}
-.home {
-  width: 69px;
-  height: 28px;
-  font-style: normal;
+  width: 40%;
   font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
   text-transform: uppercase;
   color: #ffffff;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-.article {
-  width: 95px;
-  height: 28px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #ffffff;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
-.contact {
-  width: 109px;
-  height: 28px;
-  font-style: normal;
+/* .home, .article, .contact {
   font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
   text-transform: uppercase;
   color: #ffffff;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
+} */
 
-/* Search 1 */
 .navbar_search {
-  width: 53.33px;
-  height: 50.67px;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
+  cursor: pointer;
 }
-.rectangle_bas {
-  width: 100%;
+
+main {
+  margin: 0 62px;
+}
+
+.blog_title {
+  font-size: 24.41px;
+  margin-bottom: 42px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+footer {
   height: 78px;
-  left: 0px;
-  right: 0px;
-  top: 822px;
-  right: 0px;
-  background: #222222;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+.mentions_legales {
+  text-decoration-line: underline;
 }
 
-.iBlog {
-  width: 302.85px;
-  height: 36px;
-  left: 62px;
-  top: 139px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25.414px;
-  line-height: 30px;
-  color: #000000;
-}
-
-/* Group 1 */
-.group {
-  height: 412.98px;
-  left: 62px;
-  top: 216.3px;
-}
-
-/* image 1 */
-.img_gauche {
-  width: 360.36px;
+section img {
+  object-fit: cover;
   height: 230.84px;
-  left: 63.06px;
-  top: 216.3px;
-  background: url(/site_apple/assets/images/image\ 1.png);
-}
-/* image 2 */
-.img_centre {
-  width: 360.36px;
-  height: 230.84px;
-  left: 538.61px;
-  top: 216.3px;
-  background: url(/site_apple/assets/images/image\ 2.png);
 }
 
-/* image 3 */
-.img_droite {
-  width: 359.31px;
-  height: 229.79px;
-  left: 1014.16px;
-  top: 217.36px;
-  background: url(/site_apple/assets/images/image\ 3.png);
-}
-
-.rectangle3 {
+article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 332.5px;
   height: 412.98px;
-  left: 62px;
-  top: 216.3px;
-  background: #ffffff;
   box-shadow: 0px 4.23567px 4.23567px rgba(0, 0, 0, 0.25);
+}
+
+article h2 {
+  font-size: 19.06px;
+  padding: 0 14.82px;
+}
+
+article p {
+  font-weight: 400;
+  font-size: 14.82px;
+  padding: 0 14.82px;
+}
+
+.article-footer {
+  font-weight: 400;
+  font-size: 12.71px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 750px) {
+  .navbar_links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .navbar_links,
+  footer {
+    flex-direction: column;
+  }
+  section {
+    gap: 60px;
+  }
+  footer {
+    gap: 10px;
+    padding: 3rem 0;
+  }
 }
