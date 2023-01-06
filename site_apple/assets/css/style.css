@@ -1,0 +1,150 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  height: 97px;
+  background: #222;
+  margin-bottom: 42px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* .home, .article, .contact {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+} */
+
+.navbar_search {
+  cursor: pointer;
+}
+
+main {
+  margin: 0 62px;
+}
+
+.blog_title {
+  font-size: 24.41px;
+  margin-bottom: 42px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+footer {
+  height: 78px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+.mentions_legales {
+  text-decoration-line: underline;
+}
+
+section img {
+  object-fit: cover;
+  height: 230.84px;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 332.5px;
+  height: 412.98px;
+  box-shadow: 0px 4.23567px 4.23567px rgba(0, 0, 0, 0.25);
+}
+
+article h2 {
+  font-size: 19.06px;
+  padding: 0 14.82px;
+}
+
+article p {
+  font-weight: 400;
+  font-size: 14.82px;
+  padding: 0 14.82px;
+}
+
+.article-footer {
+  font-weight: 400;
+  font-size: 12.71px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 750px) {
+  .navbar_links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .navbar_links,
+  footer {
+    flex-direction: column;
+  }
+  section {
+    gap: 60px;
+  }
+  footer {
+    gap: 10px;
+    padding: 3rem 0;
+  }
+}
