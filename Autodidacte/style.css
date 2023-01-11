@@ -1,0 +1,43 @@
+*, ::before ,::after{
+margin: 0;
+padding: 0;
+box-sizing: 0;
+}
+
+header {
+    height: 97%;
+    background-color: #000;
+
+}
+
+li {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+.navbar{
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: space-around;
+}
+
+.navbar__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    font-weight: 1000;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar__searsh {
+cursor: pointer;
+}
+
